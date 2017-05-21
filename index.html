@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="bower_components\bootstrap\dist\css\bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row">
+    <div class = "choices col-xs-12 col-md-8 col-md-offset-2">
+      <h1 class="text-center">A game of rock, scisssors, and paper</h1>
+      <h2 class="text-center">Choose your strategy:</h2>
+      <img src="img/paper.png" alt="paper" class="img responsive ch-paper choice col-xs-4" data-tag="paper"/>
+      <img src="img/rock.png" alt="rock" class="img responsive ch-rock choice col-xs-4 " data-tag="rock"/>
+      <img src="img/scissors.png" alt="scissors" class="img responsive ch-scissors choice col-xs-4 " data-tag="scissors"/>
+    </div>
+  </div>
+<div class = "row">
+    <div class = "game-play col-xs-12">
+      <div class = "scores">
+          <h3>Player's score: <span class="p-score"></span></h3>
+          <h3>Computer's score: <span class="c-score"></span></h3>
+          <h3 class="winlose">The winner is: <span class="g-winner"></span></h3>
+          <h3>Round: <span class="round">1</span></h3>
+
+        <div class = "instruct">
+          <h2>Instructions</h2>
+          <p>The first player to reach 3 points wins the game</p>
+        </div>
+      </div>
+
+
+    </div>
+</div>
+        <div class="row">
+          <section class="anim-wrap">
+              <div class="player-info col-xs-6 col-sm-6">
+                <h3 class="text-center">Player's hand</h2>
+                  <img src="" class="p-anim img-responsive" />
+              </div>
+
+               <div class="comp-info col-xs-6 col-sm-6">
+                 <h3 class="text-center">Computer's hand</h2>
+                <img src="" class="c-anim img-responsive" />
+              </div>
+        </section>
+        </div>
+
+        <div class="row">
+          <section class="win-lose-wrap">
+            <div class="winner col-xs-10 col-xs-offset-1">
+              <h3>Congratulations, you have won. Now go out to the rock-scissor-paper tournaments and win big! To play again, reload your browser</h3>
+                <img src="img/cat-money.png" alt="moneycat" class="img-responsive" />
+            </div>
+            <div class="loser col-xs-10 col-xs-offset-1">
+              <h3 class="text-center">You lose. Try again. To play again, reload your browser.</h3>
+                <img src="img/cat-loser.png" alt="moneycat" class="img-responsive center-block" />
+            </div>
+          </section>
+        </div>
+      </div>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous">
+</script>
+<script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+<script src="build/main.bundle.js"></script>
+</body>
+</html>

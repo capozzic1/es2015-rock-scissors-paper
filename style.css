@@ -1,0 +1,12 @@
+.choice {
+  cursor: pointer; }
+
+img.p-anim, .c-anim {
+  padding-top: 50px; }
+
+.winner, .loser {
+  border: 2px solid darkblue; }
+  .winner img, .loser img {
+    border: 9px solid black; }
+
+/*# sourceMappingURL=style.css.map */
