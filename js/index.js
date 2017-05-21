@@ -1,17 +1,4 @@
-//rock scissor paper game
-//revealing module pattern
 
-//es6 let, classes, modules, rest/spread, arrow functs
-//best out of 3 games is the winner
-
-//prompt player for rock, paper, or scissors
-//player has 3 to choose pictures to choose from
-
-//game starts
-//random number is generated for computer opponent
-//score is kept for both comp and user
-//on next round, user chooses another from rps
-//keeps going until round 3 occurs
 let Module = (function (){
 
 class Player {
@@ -74,7 +61,7 @@ class Player {
     }
   }
 }
-
+//A game class with some properties
 class Game {
 
   constructor(round) {
@@ -86,7 +73,7 @@ class Game {
       'img/scissors.png'
     ];
   }
-
+  //Compares input of player and computer
   compareInput() {
 
 
@@ -132,7 +119,7 @@ class Game {
 
 
           }
-
+          //handle what to do after a player/computer wins
           game.round += 1;
           game.displayRound(game.round);
           game.displayScore(player.score, computer.score);
@@ -179,16 +166,15 @@ class Game {
         let self = this;
 
         function newPic(){
-          //let pic1 = Math.floor(Math.random() * (3 - 0)) + 0;
-          //let pic2 = Math.floor(Math.random() * (3 - 0)) + 0;
+
           $('.p-anim, .c-anim').effect('shake', {direction:"up"}, {distance:30}, {times:3});
           img.src = self.gamePics[1];
           img2.src = self.gamePics[1];
 
           counter += 1;
-          //debugger;
+
           if (counter == 3){
-            //set the final choice here
+
 
             let [first, second] = self.lastAnimPic(input,input2);
 
@@ -204,15 +190,16 @@ class Game {
         }
 
       }
-
+      //this function returns an array that is used to set the last animation picture
+      //to what the user or computer chose
       lastAnimPic(choice1,choice2) {
-        //get poses of choice 1 and 2 in pics arr
+
         let idxs = [];
 
 
         for (let i = 0, len = this.gamePics.length; i < len; i++){
 
-          //
+
           if (choice1 == choice2 && this.gamePics[i].indexOf(choice1) != -1){
             idxs[0] = i;
             idxs[1] = i;
@@ -271,11 +258,7 @@ class Game {
         $('.instruct').fadeOut();
       }
 
-  //points are added to respective player
 
-  //another round starts
-
-  //repeat until one player wins most of 3
 }
 
 let game = new Game();

@@ -6,20 +6,6 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-//rock scissor paper game
-//revealing module pattern
-
-//es6 let, classes, modules, rest/spread, arrow functs
-//best out of 3 games is the winner
-
-//prompt player for rock, paper, or scissors
-//player has 3 to choose pictures to choose from
-
-//game starts
-//random number is generated for computer opponent
-//score is kept for both comp and user
-//on next round, user chooses another from rps
-//keeps going until round 3 occurs
 var Module = function () {
   var Player = function () {
     function Player() {
@@ -95,6 +81,8 @@ var Module = function () {
 
     return Player;
   }();
+  //A game class with some properties
+
 
   var Game = function () {
     function Game(round) {
@@ -104,6 +92,8 @@ var Module = function () {
       this.animDone = false;
       this.gamePics = ['img/paper.png', 'img/rock.png', 'img/scissors.png'];
     }
+    //Compares input of player and computer
+
 
     _createClass(Game, [{
       key: "compareInput",
@@ -151,7 +141,7 @@ var Module = function () {
                 break;
 
             }
-
+            //handle what to do after a player/computer wins
             game.round += 1;
             game.displayRound(game.round);
             game.displayScore(player.score, computer.score);
@@ -197,17 +187,14 @@ var Module = function () {
         var self = this;
 
         function newPic() {
-          //let pic1 = Math.floor(Math.random() * (3 - 0)) + 0;
-          //let pic2 = Math.floor(Math.random() * (3 - 0)) + 0;
+
           $('.p-anim, .c-anim').effect('shake', { direction: "up" }, { distance: 30 }, { times: 3 });
           img.src = self.gamePics[1];
           img2.src = self.gamePics[1];
 
           counter += 1;
-          //debugger;
-          if (counter == 3) {
-            //set the final choice here
 
+          if (counter == 3) {
             var _self$lastAnimPic = self.lastAnimPic(input, input2),
                 _self$lastAnimPic2 = _slicedToArray(_self$lastAnimPic, 2),
                 first = _self$lastAnimPic2[0],
@@ -222,15 +209,17 @@ var Module = function () {
           }
         }
       }
+      //this function returns an array that is used to set the last animation picture
+      //to what the user or computer chose
+
     }, {
       key: "lastAnimPic",
       value: function lastAnimPic(choice1, choice2) {
-        //get poses of choice 1 and 2 in pics arr
+
         var idxs = [];
 
         for (var i = 0, len = this.gamePics.length; i < len; i++) {
 
-          //
           if (choice1 == choice2 && this.gamePics[i].indexOf(choice1) != -1) {
             idxs[0] = i;
             idxs[1] = i;
@@ -286,13 +275,6 @@ var Module = function () {
 
         $('.instruct').fadeOut();
       }
-
-      //points are added to respective player
-
-      //another round starts
-
-      //repeat until one player wins most of 3
-
     }]);
 
     return Game;
