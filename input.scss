@@ -1,4 +1,6 @@
-
+body {
+font-family: 'Open Sans', sans-serif;
+}
 .choice {
     cursor: pointer;
 }
@@ -9,7 +11,7 @@ img.p-anim, .c-anim {
 
 .winner, .loser {
     border: 2px solid darkblue;
-    
+
 
 
     img {
