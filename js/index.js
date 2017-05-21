@@ -12,6 +12,7 @@
 //score is kept for both comp and user
 //on next round, user chooses another from rps
 //keeps going until round 3 occurs
+let Module = (function (){
 
 class Player {
   constructor() {
@@ -284,3 +285,4 @@ let computer = new Player();
 
 
 game.init();
+})();
